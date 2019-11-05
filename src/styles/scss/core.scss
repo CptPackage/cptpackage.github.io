@@ -1,0 +1,205 @@
+@import url("./_fonts.scss");
+
+.section {
+    height: 90vh;
+
+    .logo-text {
+        font-family: "BebasNeueRegular", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+    }
+}
+
+.mini-section {
+    height: 50vh;
+
+    .logo-text {
+        font-family: "BebasNeueRegular", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+    }
+}
+
+.col-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-bar-container {
+    min-width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    z-index: 10;
+
+    .logo {
+        margin-left: 20px;
+        margin-top: 1px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        .brand-logo {
+            display: inline-block;
+            width: 35px;
+        }
+
+        .brand-name {
+            display: inline-block;
+            margin-left: 5px;
+            margin-top: 18px;
+            color: #43425D;
+            font-family: "BebasNeueRegular", sans-serif;
+            font-size: 32px;
+        }
+    }
+
+    .nav-buttons {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-right: auto;
+
+        * {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .text-button {
+            a {
+                color: #2d92fd !important;
+                // color: #707070 !important;
+                margin-right: 20px;
+                text-align: center;
+                text-decoration: none;
+
+
+                &:hover {
+                    color: #007bff !important;
+                }
+            }
+        }
+    }
+}
+
+.dark-button {
+    background-color: #2C3E50;
+    border: 0px;
+
+    &:hover {
+        background-color: #35516D;
+    }
+}
+
+.footer {
+    margin-top: 10px;
+    padding: 20px;
+    border-top: 1px solid;
+    border-top-color: #43425DAF;
+
+    .footer-container {
+        margin-left: 20px;
+        display: flex;
+        position: relative;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        align-items: center;
+
+        .brand-logo {
+            display: inline-block;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            height: 50px;
+            opacity: 0.35;
+        }
+
+        .slogan {
+            font-family: "BebasNeueRegular", sans-serif;
+            font-size: 30px;
+            color: #2B2A41;
+            opacity: 0.35;
+        }
+
+        .social-media-icons-container {
+            margin-left: auto;
+
+            .social-media-icon {
+                display: inline-block;
+                height: 70px;
+                vertical-align: middle;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+/*                                         Mobile View                                         */
+@media (max-width: 600px) {
+    .nav-bar-container {
+        height: 20vh;
+        padding-bottom: 10px;
+        justify-content: center;
+        align-items: center;
+
+        .dark-button {
+            font-size: 15px;
+        }
+    }
+
+    .footer {
+        margin-top: 30px;
+        padding: 20px;
+        border-top: 1px solid;
+        border-top-color: #43425DAF;
+
+        .footer-container {
+            margin-left: 20px;
+            display: flex;
+            position: relative;
+            align-items: center;
+            flex-direction: column;
+
+            .brand-logo {
+                display: block;
+                position: unset;
+                transform: translate(0%, 0%);
+                top: 0;
+                bottom: 0;
+                margin-bottom: 10px;
+                margin-top: -10px;
+            }
+
+            .slogan {
+                margin: 0px;
+                font-size: 28px;
+            }
+
+            .social-media-icons-container {
+                margin: auto;
+            }
+        }
+    }
+}
+
+/*                                         Tablet View                                         */
+@media (max-width: 768px) and (min-width: 600px) {
+
+    .nav-bar-container {
+        height: 11vh !important;
+        padding-bottom: 10px;
+        justify-content: center;
+        align-items: center;
+
+        .nav-buttons {
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+}

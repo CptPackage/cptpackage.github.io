@@ -1,0 +1,238 @@
+@import url("./_fonts.scss");
+@import "mobile/landing-page-mobile.scss";
+
+
+.banner-section {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 40px;
+    overflow: hidden;
+
+    .title {
+        font-family: 'Comfortaa', sans-serif;
+        font-size: 40px;
+        color: #2B2A41;
+    }
+
+    .description {
+        font-family: "Roboto", sans-serif;
+        font-style: italic;
+        color: #43425D;
+    }
+
+    .illustration {
+        margin-top: 20px;
+        display: block;
+        height: 350px;
+        background: cover;
+    }
+
+    .launch-button {
+        margin-top: 20px;
+        width: 310px;
+        height: 60px;
+        background-color: #2ECC71;
+        font-family: "Roboto", sans-serif;
+        border: 0px;
+
+        &:hover {
+            background-color: #4CEB8F;
+        }
+
+
+        &:active:focus {
+            box-shadow: none;
+            background-color: #2ECC71;
+        }
+    }
+}
+
+.features-section {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 75vh;
+
+    .title {
+        font-family: 'Comfortaa', sans-serif;
+        font-size: 35px;
+        color: #2B2A41;
+    }
+
+    .features-container {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        .feature {
+
+            .icon {
+                img {
+                    height: 150px;
+                }
+            }
+
+            .description {
+                text-align: center;
+                text-anchor: middle;
+                padding: 60px;
+                padding-top: 20px;
+                font-family: 'Roboto', sans-serif;
+                font-size: 20px;
+                color: #43425D;
+            }
+        }
+    }
+}
+
+.contact-section {
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    .title {
+        font-family: 'Comfortaa', sans-serif;
+        font-size: 30px;
+        margin-right: 20vw;
+    }
+
+    .contact-button {
+        margin-top: -10px;
+        font-size: 22px;
+        font-family: 'Roboto', sans-serif;
+        background-color: #9B59B6;
+        border: 0px;
+        box-shadow: none;
+
+        &:hover {
+            background-color: #C97BE9;
+        }
+
+
+        &:active:focus {
+            box-shadow: none;
+            background-color: #9B59B6;
+        }
+    }
+
+}
+
+.section-seperator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    hr {
+        background-color: #43425D;
+        height: 0.5px;
+        width: 400px;
+        opacity: 0.2;
+    }
+}
+
+
+/*                                         Mobile View                                         */
+@media (max-width: 600px) {
+
+    .banner-section {
+        margin-top: 10px;
+        margin-bottom: 0px;
+
+        .col-center {
+            justify-content: flex-start;
+        }
+
+        .title {
+            font-size: 28px;
+        }
+
+        .description {
+            font-size: 15px;
+        }
+
+        .illustration {
+            max-height: 45%;
+        }
+
+    }
+
+    .features-section {
+        height: auto;
+    }
+
+    .contact-section {
+        height: auto;
+
+        .title {
+            width: 100%;
+            margin-right: 0px;
+        }
+
+        .contact-button {
+            width: 100%;
+            margin-top: 10px;
+        }
+    }
+
+    .section-seperator {
+        hr {
+            width: 70%;
+            /*To align better in the center on mobile*/
+            margin-left: 21%;
+        }
+    }
+
+}
+
+/*                                         Tablet View                                         */
+@media (max-width: 768px) and (min-width: 600px) {
+    .banner-section {
+        margin-bottom: 0px;
+
+        .illustration {
+            height: 500px;
+        }
+
+        .title {
+            font-size: 30px;
+        }
+
+        .description {
+            font-size: 18px;
+        }
+
+    }
+
+    .features-section {
+        height: auto;
+
+        .features-container {
+            .description {
+                padding: 0px !important;
+                padding-top: 20px !important;
+            }
+        }
+    }
+
+    .contact-section {
+        height: auto;
+
+        .title {
+            width: 100%;
+            margin-right: 0px;
+        }
+
+        .contact-button {
+            width: 50%;
+            margin-top: 10px;
+        }
+    }
+}

@@ -1,0 +1,237 @@
+.contribute-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .new-fountain-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 10px;
+        align-items: center;
+
+        .input-container {
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            width: 50%;
+            height: 50px;
+            margin-bottom: 50px;
+
+            label {
+                display: block;
+                position: absolute;
+                top: -32px;
+                font-family: 'Comfortaa', sans-serif;
+                font-size: 20px;
+                color: #43425D;
+            }
+
+            .input-with-button-container {
+                position: relative;
+
+                input {
+                    display: block;
+                    border: 1px solid rgba(112, 112, 112, 0.5);
+                    border-radius: 2px;
+                    width: 100%;
+                    height: 40px;
+                    opacity: 0.95;
+                    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.02);
+                    padding-left: 10px;
+                    padding-right: 20px;
+                    font-family: 'Comfortaa', sans-serif;
+                }
+
+
+                .side-container {
+                    position: absolute;
+                    height: 100%;
+                    width: 55px;
+                    z-index: 3;
+                    right: 0px;
+                    top: 0px;
+                    border-radius: 2px;
+                }
+
+                .side-button-container {
+                    background-color: #FFFFFF;
+                    border: 1px solid rgba(112, 112, 112, 0.5);
+                    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.02);
+                    cursor: pointer;
+
+                    .gps-button {
+                        height: 90%;
+                        margin-left: 10px;
+                        margin-top: 2px;
+                    }
+
+                    .upload-button {
+                        height: 70%;
+                        margin-left: 10px;
+                        margin-top: 6px;
+                    }
+
+                }
+
+                .side-icon-container {
+                    background-color: #FFFFFF00;
+
+                    .email-validity-icon {
+                        height: 70%;
+                        margin-left: 15px;
+                        margin-top: 6px;
+                    }
+
+                }
+
+            }
+        }
+
+        .recaptcha {
+            margin-top: -25px;
+            margin-bottom: 25px;
+        }
+
+        .add-fountain-button {
+            width: 50%;
+            height: 50px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 20px;
+            font-weight: lighter;
+            background-color: #2C3E50;
+
+            &:hover {
+                background-color: #35516D;
+            }
+        }
+    }
+}
+
+.modal-global-container {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    margin-left: -15px;
+    min-width: 100%;
+    min-height: 100vh;
+    z-index: 11;
+    background-color: rgba(0, 0, 0, 0.2);
+
+
+    .modal-body-container {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        min-width: 60%;
+        min-height: 500px;
+        z-index: 13;
+        border-radius: 5px;
+        background-color: white;
+
+        .modal-poster-container {
+            height: 280px;
+            margin-top: -10px;
+
+            .modal-poster {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .modal-title {
+            font-family: 'Comfortaa', sans-serif;
+            font-size: 32px;
+            color: #FF6B6B;
+            text-align: center;
+        }
+
+        .modal-description {
+            font-family: 'Comfortaa', sans-serif;
+            font-size: 19px;
+            width: 60%;
+            text-align: center;
+            color: #43425D;
+        }
+
+        .close-modal-button {
+            font-family: 'Comfortaa', sans-serif;
+            position: absolute;
+            font-size: 25px;
+            top: 8px;
+            right: 16px;
+            cursor: pointer;
+            color: #43425D;
+        }
+    }
+}
+
+/*                                         Mobile View                                         */
+@media (max-width: 600px) {
+    .contribute-section {
+        height: 77vh;
+        margin-bottom: -20px;
+
+        .new-fountain-container {
+            .input-container {
+                width: 80%;
+                height: 50px;
+            }
+
+            .recaptcha {
+                margin-top: 0px;
+                margin-bottom: 25px;
+            }
+
+            .add-fountain-button {
+                width: 80%;
+                height: 50px;
+                margin-bottom: 0px;
+            }
+        }
+    }
+
+    .modal-global-container {
+        display: flex;
+        position: fixed;
+        justify-content: center;
+        align-items: center;
+        margin-left: -15px;
+        min-width: 100%;
+        min-height: 100vh;
+        z-index: 11;
+        background-color: rgba(0, 0, 0, 0.2);
+
+
+        .modal-body-container {
+            margin-top: -20%;
+
+            .modal-poster-container {
+                height: 250px;
+            }
+
+            .modal-title {
+                font-size: 28px;
+            }
+
+            .modal-description {
+                width: 90%;
+                font-size: 17px;
+            }
+        }
+    }
+
+}
+
+/*                                         Tablet View                                         */
+@media (max-width: 768px) and (min-width: 600px) {
+
+    .contribute-section {
+        height: 58vh;
+    }
+}

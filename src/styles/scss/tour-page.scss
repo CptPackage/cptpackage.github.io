@@ -1,0 +1,243 @@
+@import url("./_fonts.scss");
+
+.map-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    .map-navigation-bar-container {
+        position: absolute;
+        z-index: 1;
+        margin-top: 65px;
+
+        .map-navigation-bar {
+            height: 55px;
+            width: 550px;
+            border: 1px solid #FFFFFF;
+            border-radius: 6px;
+            padding-right: 78px;
+            padding-left: 30px;
+            background-color: rgba(255, 255, 255, 0.95);
+            font-family: 'Comfortaa', sans-serif;
+            font-size: 20px;
+            box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.08);
+            color: #43425D;
+        }
+
+        .gps-button {
+            position: absolute;
+            height: 100%;
+            width: 55px;
+            background-color: #FFFFFF;
+            z-index: 3;
+            right: 0px;
+            border: 1px solid #FFFFFF;
+            border-radius: 6px;
+            box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.05);
+            cursor: pointer;
+
+            .gps-button-icon {
+                height: 85%;
+                margin-left: 4px;
+                margin-top: 4px;
+            }
+
+            &:hover {
+                background: #FAFAFA;
+                border: 1px solid #FAFAFA;
+            }
+
+            &:active {
+                background: #FFFFFF;
+                border: 1px solid #FFFFFF;
+            }
+        }
+    }
+}
+
+.monuments-section {
+    margin-top: 5px;
+
+    .section-title {
+        font-weight: 200;
+        font-size: 35px;
+        font-family: 'Comfortaa', sans-serif;
+        color: #43425D;
+        margin-left: 20px;
+    }
+
+    .monuments-container {
+        margin-left: 15px;
+        overflow: auto;
+        height: 535px;
+
+        .monument-presentation-container {
+            overflow: auto;
+            display: flex;
+            flex-wrap: wrap;
+
+            .monument-poster {
+                display: inline-block;
+                margin: 10px;
+                height: 250px;
+                background-size: cover;
+                border: 1px solid #D8D4D4;
+                border-radius: 6px;
+                box-shadow: 0px 1px 6px 2px rgba(0, 0, 0, 0.16);
+            }
+
+            .monument-data {
+                display: inline-block;
+                margin-left: 10%;
+
+                .data-title {
+                    font-family: "BebasNeueRegular", sans-serif;
+                    font-size: 40px;
+                    color: #43425D;
+                }
+
+                .data-description {
+                    overflow: auto;
+                    width: 700px;
+                    height: 145px;
+                }
+
+                .guide-button {
+                    background-color: #2C3E50;
+                    border: 0px;
+                    width: 280px;
+                    height: 45px;
+                    font-family: 'Roboto', sans-serif;
+                    font-size: 18px;
+                    font-weight: lighter;
+                    margin-left: 30%;
+
+                    &:hover {
+                        background-color: #335D87;
+                    }
+
+                    &:active:focus {
+                        background-color: #2C3E50;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*                                         Mobile View                                         */
+@media (max-width: 600px) {
+
+    .map-container {
+        .map-navigation-bar-container {
+            margin-top: 80px;
+            width: 80%;
+
+
+            .map-navigation-bar {
+                width: 100%;
+                font-size: 15px;
+            }
+
+        }
+    }
+
+
+    .monuments-section {
+        height: 78vh;
+
+        .section-title {
+            font-weight: 300;
+            margin-left: 0px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .monuments-container {
+            margin-left: 0px;
+            overflow: auto;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+
+            .monument-presentation-container {
+                margin-bottom: 20px;
+
+                .monument-poster {
+                    display: block;
+                    height: 220px;
+                }
+
+                .monument-data {
+
+                    .data-title {
+                        width: 90%;
+                        text-align: center;
+                        font-size: 35px;
+                    }
+
+                    .data-description {
+                        width: 95%;
+                        height: 145px;
+                        margin-bottom: 10px;
+                    }
+
+                    .guide-button {
+                        width: 280px;
+                        height: 45px;
+                        margin-left: 2%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*                                         Tablet View                                         */
+@media (max-width: 768px) and (min-width: 600px) {
+    .monuments-section {
+        height: auto;
+
+        .section-title {
+            font-weight: 300;
+            margin-left: 0px;
+            text-align: center;
+        }
+
+        .monuments-container {
+
+            .monument-presentation-container {
+                margin-bottom: 20px;
+
+                .monument-poster {
+                    display: block;
+                    height: 220px;
+                    margin: auto;
+                    margin-bottom: 40px;
+                }
+
+                .monument-data {
+
+                    .data-title {
+                        width: 90%;
+                        text-align: center;
+                        font-size: 35px;
+                    }
+
+                    .data-description {
+                        width: 90%;
+                        height: 145px;
+                        margin-bottom: 10px;
+                    }
+
+                    .guide-button {
+                        width: 280px;
+                        height: 45px;
+                        margin-left: 25%;
+                    }
+                }
+            }
+        }
+    }
+}
